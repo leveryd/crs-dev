@@ -3,12 +3,13 @@ ModSecurity v3 规则开发环境, 适合用来测试和研究单条规则
 # 运行容器
 
 ```
-~ # docker run -ti -p 80:80 -e ERRORLOG=/tmp/nginx_error.log -e MODSEC_DEBUG_LOG=/tmp/debug.log -e MODSEC_DEBUG_LOGLEVEL=9 -e MODSEC_AUDIT_LOG=/tmp/audit.log -e BACKEND=http://10.56.58.13:8888 crs-dev
+~ # docker run -ti -p 80:80 -e ERRORLOG=/tmp/nginx_error.log -e MODSEC_DEBUG_LOG=/tmp/debug.log -e MODSEC_DEBUG_LOGLEVEL=9 -e MODSEC_AUDIT_LOG=/tmp/audit.log -e BACKEND=http://10.56.58.13:8888 leveryd/modsecurity:CVE-2024-1019
 ```
 
 注意修改 -e BACKEND 指向你的后端服务, 修改 -p 80:80 暴露端口
 
 访问 127.0.0.1:80 就可以访问后端服务
+
 访问 127.0.0.1:80/block-test ，返回403，说明WAF正常工作
 
 # 查看lua日志
