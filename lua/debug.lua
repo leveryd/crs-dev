@@ -22,6 +22,8 @@ function main()
     print_var("FILES")
     print_var("ARGS")
     print_var("PATH_INFO")
+    print_var("REQUEST_FILENAME")
+    print_var("REQUEST_BASENAME")
 
     debug("========debug end=======")
     return nil;
