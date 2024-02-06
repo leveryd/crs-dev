@@ -1,0 +1,5 @@
+alias 1="nginx -s reload"
+alias 2="vim /tmp/debug.lua"
+alias 3="vim /etc/modsecurity.d/setup.conf"
+alias 4="cat /tmp/lua_debug.txt"
+alias 5="echo > /tmp/lua_debug.txt && tail -f /tmp/lua_debug.txt"
